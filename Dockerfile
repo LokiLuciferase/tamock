@@ -22,5 +22,5 @@ RUN wget -qO- https://micromamba.snakepit.net/api/micromamba/linux-64/$MICROMAMB
     && mkdir -p /opt/micromamba/envs \
     && micromamba install -p $MAMBA_ROOT_PREFIX python=3.6 wheel setuptools pip -c conda-forge \
     && micromamba install -p $MAMBA_ROOT_PREFIX centrifuge art -c bioconda -c conda-forge -c defaults \
-    && /opt/tamock/tamock
+    && /opt/tamock/tamock --install-test
 CMD [ "/opt/tamock/tamock" ]
